@@ -81,14 +81,14 @@ nav{
   font-size:10px;font-weight:400;letter-spacing:5px;
   text-transform:uppercase;color:var(--silver);
   margin-bottom:36px;
-  animation:fadeUp .7s ease .2s both;
+  animation:fadeUp .7s ease .2s forwards;
 }
 .hero-h1{
   font-family:'Playfair Display',Georgia,serif;
   font-size:clamp(48px,5.5vw,82px);
   font-weight:400;color:var(--white);
   line-height:1.06;margin-bottom:6px;
-  animation:fadeUp .7s ease .4s both;
+  animation:fadeUp .7s ease .4s forwards;
 }
 .hero-h1 em{font-style:italic;color:rgba(255,255,255,.7)}
 .hero-h2{
@@ -96,17 +96,17 @@ nav{
   font-size:clamp(48px,5.5vw,82px);
   font-weight:700;color:var(--white);
   line-height:1.06;margin-bottom:44px;
-  animation:fadeUp .7s ease .55s both;
+  animation:fadeUp .7s ease .55s forwards;
 }
 .hero-body{
   font-size:14px;font-weight:300;
   color:rgba(255,255,255,.5);
   line-height:2;max-width:360px;margin-bottom:52px;
-  animation:fadeUp .7s ease .7s both;
+  animation:fadeUp .7s ease .7s forwards;
 }
 .hero-btns{
   display:flex;gap:14px;flex-wrap:wrap;
-  animation:fadeUp .7s ease .85s both;
+  animation:fadeUp .7s ease .85s forwards;
 }
 .btn-solid{
   padding:15px 34px;
@@ -128,7 +128,7 @@ nav{
 }
 .hero-logo-wrap svg{
   width:100%;max-width:280px;
-  animation:fadeIn 1s ease .6s both;
+  animation:fadeIn 1s ease .6s forwards;
 }
 .hero-stats{
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -419,6 +419,8 @@ footer{
 }
 
 /* ANIMATIONS */
+
+.hero-tag,.hero-h1,.hero-h2,.hero-body,.hero-btns{opacity:0}
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(24px)}
   to{opacity:1;transform:translateY(0)}
@@ -431,7 +433,7 @@ footer{
   to{transform:translateX(-50%)}
 }
 .reveal{
-  opacity:0;transform:translateY(28px);
+  opacity:1;transform:translateY(0);
   transition:opacity .7s ease,transform .7s ease;
 }
 .reveal.on{opacity:1;transform:translateY(0)}
